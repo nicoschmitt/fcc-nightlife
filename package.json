@@ -1,0 +1,21 @@
+{
+  "name": "nico-nightlife",
+  "version": "0.1.0",
+  "description": "FCC Nightlife",
+  "main": "server.js",
+  "repository": "",
+  "author": "Nicolas Schmitt",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "mongodb": "^2.1.7",
+    "mongoose": "^4.4.6",
+    "node-sass-middleware": "^0.9.7",
+    "node-yelp": "^0.0.3",
+    "passport": "^0.3.2",
+    "passport-anonymous": "^1.0.1",
+    "passport-azure-ad": "^1.4.1",
+    "shortid": "^2.2.4"
+  }
+}

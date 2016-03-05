@@ -1,0 +1,27 @@
+<div ng-show="vm.loading">
+    <i class="fa fa-cog fa-spin fa-5x"></i>
+</div>
+
+<div ng-hide="vm.loading">
+    <h2>Bars around you</h2>
+    <div class="container" ng-show="vm.bars.length">
+        <div class="bar row" ng-repeat="bar in vm.bars">
+            <div class="col-lg-2">
+              <img ng-src="{{bar.thumbnail}}" class="img-rounded img-responsive" />  
+            </div>
+            <div class="col-lg-8">
+                <h3><a href="{{bar.url}}" target="_blank">{{bar.name}}</a></h3>
+                <div>{{bar.categories}}</div>
+                <div>{{bar.snippet}}</div>
+            </div>
+            <div class="col-lg-2">
+              
+            </div>
+        </div>
+    </div>
+    <div ng-hide="vm.bars.length">
+        <p>No bars found around you (where are you living?!?).</p>
+    </div>
+</div>
+
+<div>{{vm.message}}</div>

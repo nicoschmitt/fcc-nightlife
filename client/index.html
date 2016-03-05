@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" ng-app="votingApp">
+  <head>
+    <title>Nightlife</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/angular-chart.js/0.8.8/angular-chart.min.css">
+  
+    <link rel="stylesheet" href="/css/app.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.7/angular-strap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.7/angular-strap.tpl.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-chart.js/0.8.8/angular-chart.min.js"></script>
+    
+    <script src="/lib//adal.min.js"></script>
+    <script src="/lib/adal-angular.min.js"></script>
+
+    <script src='/app/app.js'></script>
+    <script src='/app/scripts/top-nav.js'></script>
+    <script src='/app/scripts/search.js'></script>
+
+  </head>
+  <body>
+    
+    <div class="container">
+      <top-nav></top-nav>
+    </div>
+
+    <div class="container">
+
+      <div class="jumbotron">
+        <div ng-view></div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

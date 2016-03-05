@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+$black: #333;
+$white: #ccc;
+
+html {
+  background-color: $black;
+};
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: Open Sans;
+  background-color: $black;
+};
+
+.navbar {
+  margin-bottom: 20px;
+};
+
+.navbar-default .navbar-brand, .jumbotron {
+  color: $black;
+};
+
+.ng-dirty.ng-invalid {
+  border-color: red;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+#message {
+  margin-top: 30px;
+} 
+
+.bar {
+  height: 130px;
+  background-color: $black;
+  color: $white;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+  a, a:hover, a:active {
+    text-decoration: none;
+  }
+  
+  img {
+    height: 110px;
+  }
+  
+  h3 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+}
