@@ -15,7 +15,10 @@
                 <div>{{bar.snippet}}</div>
             </div>
             <div class="col-lg-2">
-              
+              <div class="pull-right going-info"><i class="fa fa-users"></i>{{bar.attending.length}}</div>
+              <div class="pull-right going-btn" ng-show="userInfo.isAuthenticated">
+                  <button type="button" class="btn btn-primary" ng-click="vm.letsgo(bar)">{{ bar.imgoing ? "No more" : "Let's Go" }}</button>
+              </div>
             </div>
         </div>
     </div>

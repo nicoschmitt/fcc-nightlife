@@ -5,7 +5,7 @@
   app.directive("topNav", ['adalAuthenticationService', "$location", "$rootScope",
     function (adalProvider, $location, $rootScope) {
         
-        var topNavCtrl = function() {
+        var topNavCtrl = function() { 
           var vm = this;
           
           vm.searchText = "";
@@ -30,6 +30,9 @@
           vm.search = function() {
             $rootScope.$broadcast("search", vm.searchText);
           };
+          
+          var previous = localStorage.getItem("nico-bar-location");
+          if (previous && previous.substring(0, 3) != "ll=") vm.searchText = previous;
         };
         
         return {

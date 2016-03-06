@@ -3,19 +3,17 @@
     var mongoose = require('mongoose');
     var shortid = require("shortid");
 
-    var Poll = mongoose.model("Poll", new mongoose.Schema({ 
+    var Rsvp = mongoose.model("Rsvp", new mongoose.Schema({ 
         _id: {
             type: String,
             unique: true,
             'default': shortid.generate
         },
-        ownerName: String,
-        ownerEmail: String,
-        title: String,
-        options: [String],
-        votes: []
+        when: String,
+        bar: { type: String, index: true },
+        attending: [String],
     }));
         
-    module.exports = Poll;
+    module.exports = Rsvp;
     
 }());

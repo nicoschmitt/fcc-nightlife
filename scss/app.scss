@@ -56,3 +56,25 @@ body {
     margin-bottom: 5px;
   }
 }
+
+.going-info {
+  padding: 6px;
+  width: 80px;
+  height: 35px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid $white;
+  border-radius: 5px;
+  
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+.going-btn {
+  margin-top: 10px;
+  
+  button {
+    width: 80px;
+  }
+}
