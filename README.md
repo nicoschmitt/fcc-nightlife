@@ -13,7 +13,7 @@ I used https://mlab.com for Mongodb, Yelp for local API.
 | MONGO_URI            |  Mongodb connection string (including user/pass if needed)  
 | YELP_CONSUMER_KEY    |  Get from Yelp once registered  
 | YELP_CONSUMER_SECRET |  Get from Yelp once registered  
-| YELP_TOKEN: Get      |  from Yelp once registered  
+| YELP_TOKEN           |  Get from Yelp once registered  
 | YELP_TOKEN_SECRET    |  Get from Yelp once registered  
 
 
