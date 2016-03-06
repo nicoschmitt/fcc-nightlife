@@ -5,14 +5,13 @@
     var router = express.Router();
     var moment = require("moment");
     
-    // register routes
-    
     // clean database
+    
     var Rsvp = require('./rsvp.model');
     var today = moment().format("YYYY-MM-DD");
-    Rsvp.remove({ when: { $ne: today }}, function(){
-        
-    })
+    Rsvp.remove({ when: { $ne: today }}, function(){ });
+    
+    // Route logic
     
     var getAttending = function(req, res) {
         console.log("Get attending for bar " + req.params.barid);
@@ -27,7 +26,6 @@
     
     var updateAttending = function(req, res) {
         console.log("Update attending for bar " + req.params.barid);
-        console.log(req.body);
         
         var barid = req.params.barid;
         Rsvp.findOne({bar: barid, when: today}, function(err, rsvp) {
@@ -52,7 +50,6 @@
     
     var removeAttending = function(req, res) {
         console.log("Remove attending for bar " + req.params.barid);
-        console.log(req.body);
         
         var barid = req.params.barid;
         Rsvp.findOne({bar: barid, when: today}, function(err, rsvp) {
@@ -67,15 +64,11 @@
         });
     }
     
+    // register routes
+    
     router.get('/:barid', getAttending);
     router.put('/:barid', passport.authenticate('oauth-bearer', { session: false }), updateAttending);
     router.delete('/:barid', passport.authenticate('oauth-bearer', { session: false }), removeAttending);
-    /*
-    router.get('/start/:location', controller.startAuth);
-    router.get('/:id', controller.show);
-    router.post('/', controller.create);
-    router.patch('/:id', controller.update);
-    */
     
     module.exports = router;
     

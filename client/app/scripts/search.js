@@ -29,7 +29,6 @@
                     vm.bars.forEach(function(bar) {
                        $http.get("/api/rsvp/" + bar.id).then(function(resp) {
                            // Success
-                           console.log(resp.data.detail);
                            bar.attending = resp.data.detail;
                            if (bar.attending.indexOf(user) >= 0) bar.imgoing = true;
                            

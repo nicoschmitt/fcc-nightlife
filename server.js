@@ -26,7 +26,7 @@ app.use(passport.initialize());
 passport.use(new AnonymousStrategy());
 passport.use(new OIDCBearerStrategy({
   "identityMetadata": "https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration",
-  "audience": process.env.APP_ID,
+  "audience": process.env.MS_APP_ID,
   "validateIssuer": false,
 }, function (token, done) {
 	return done(null, token, null);
