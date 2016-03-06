@@ -6,7 +6,9 @@
         function ($scope, $http, $location, $alert, adal) {
             var vm = this;
             
-            var user = adal.userInfo.profile.email;
+            var authenticated = adal.userInfo.isAuthenticated;
+            var user = (authenticated && adal.userInfo.profile.email) || "";
+            
             vm.loading = true;
             vm.bars = [];
             vm.message = "";
